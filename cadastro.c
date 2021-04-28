@@ -69,10 +69,9 @@ void cadastrar_veiculo(){
     else{
         system("cls");
         printf("\n\t\tCADASTRO DE VEÍCULOS");
-
+        registroV[i].quilometragem = 0;
         insere_cadastro_veiculos(i);
         
-        registroV[i].quilometragem = 0;
         registroV[i].status = 1;
 
         printf("\n\t-----Cadastro realizado com sucesso-----\n");
@@ -109,8 +108,13 @@ void cadastrar_viagem(){
             scanf("%d", &opcao);
             opcao--;
             
-            if(registroM[opcao].status != 1)
-                printf("\n\tVocê selecionou um motorista inválido para a viagem!");
+            if(registroM[opcao].status != 1){
+                printf("\n\tVocê selecionou um motorista inválido para a viagem!\n");
+                system("cls");
+                printf("\n\t\tCADASTRO DE VIAGENS");
+                printf("\n\n\tMotoristas disponíveis: ");
+                consultar_motorista_disponivel();
+            }
 
         }while(registroM[opcao].status != 1);
 
@@ -127,10 +131,14 @@ void cadastrar_viagem(){
             scanf("%d", &opcao);
             opcao--;
 
-            if(registroM[opcao].status != 1)
+            if(registroV[opcao].status != 1){
                 printf("\n\tVocê selecionou um veículo inválido para a viagem!");
-
-        }while(registroM[opcao].status != 1);
+                system("cls");
+                printf("\n\t\tCADASTRO DE VIAGENS");
+                printf("\n\n\tVeículos disponíveis:");
+                consultar_vDisponivel(i);
+            }
+        }while(registroV[opcao].status != 1);
 
         registroV[opcao].status = 2;
         registroViagem[i].id_veiculo = opcao;
