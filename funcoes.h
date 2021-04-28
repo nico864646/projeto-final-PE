@@ -76,7 +76,7 @@ void excluir_viagem();
 //      Consultar veiculo
 void consultar_veiculo();
 void consultar_vDisponivel();
-void consultar_editar();
+void consultar_editarVeiculo();
 void prints_veiculo(int i);
 
 //      Consulta motorista
