@@ -9,7 +9,7 @@ void menu(){
     do{
         //Menu Principal
         system("cls");
-        printf("\n\t\t\tCONTROLE DE FROTAS\n");
+        printf("\n\tCONTROLE DE FROTAS\n");
         printf("- - - - - - - - - - - - - - - - - -\n");
         printf("\t\tMenu\n");
         printf("\t1. Cadastrar\n");
