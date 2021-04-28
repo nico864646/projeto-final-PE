@@ -65,7 +65,7 @@ void consultar_mais_viajou(){
             id = i;
         }
     }
-    printf("\n\tO motorista que mais viajou foi: %s.\n", registroM[id].nome);
+    printf("\n\tMOTORISTA COM MAIS VIAGENS: %s.\n", registroM[id].nome);
     system("pause");
 }
 
@@ -104,25 +104,33 @@ void consultar_vConcluida(){
 }
 
 void consultar_media_viagem(){
+
     //Soma a quantidade de viagens e divide pela quantidade de motoristas
     int total_viagens = 0;
     int total_motorista = 0;
-    for(int i = 0; i < 10; i++){
+    int i = 0;
+
+    for(i = 0; i < 30; i++){
         if(registroViagem[i].status > 0)
             total_viagens++;
+    }
+
+    for(i = 0; i < 10; i++){
         if(registroM[i].status > 0)
             total_motorista++;
     }
+
     float media = (float)total_viagens / (float)total_motorista;
     printf("\n- - - - - - - - - - - - - - - - - - - - - - -");
-    printf("\n\tMedia da Viagens é %.1f viagens por motorista.\n", media);
+    printf("\n\tMédia da Viagens: %.1f\n", media);
     system("pause");
 }
 
 
 void consultar_vDuracao(){
     int maior_duracao = 0, id = 0;
-    for(int i = 0; i < 10; i++){
+
+    for(int i = 0; i < 30; i++){
         if(registroViagem[i].status == 2){
             if(registroViagem[i].duracao_dias > maior_duracao){
                 maior_duracao = registroViagem[i].duracao_dias;
@@ -134,7 +142,7 @@ void consultar_vDuracao(){
     printf("\n\t\tViagem com maior duração");
     printf("\n\tID: %d", id+1);
     printf("\n\tDia inicial: %d/%d/%d", registroViagem[id].data_inicio_dia, registroViagem[id].data_inicio_mes, registroViagem[id].data_inicio_ano);
-    printf("\n\tHora inicil: %d:%d ", registroViagem[id].hora_inicio_hh, registroViagem[id].hora_inicio_mm);
+    printf("\n\tHora inicial: %d:%d ", registroViagem[id].hora_inicio_hh, registroViagem[id].hora_inicio_mm);
     printf("\n\tDia final: %d/%d/%d", registroViagem[id].data_fim_dia, registroViagem[id].data_fim_mes, registroViagem[id].data_fim_ano);
     printf("\n\tHora final: %d:%d ", registroViagem[id].hora_fim_hh, registroViagem[id].hora_fim_mm);
     printf("\n\tDuração da viagem: %d dias\n",  registroViagem[id].duracao_dias);
@@ -143,7 +151,7 @@ void consultar_vDuracao(){
 
 //Funções de informações
 void prints_veiculo(int i){
-    printf("\n\tId: %d", i+1);
+    printf("\n\tID: %d", i+1);
     printf("\n\tMarca: %s", registroV[i].marca);
     printf("\n\tModelo: %s", registroV[i].modelo);
     printf("\n\tPlaca: %s", registroV[i].placa);
@@ -154,7 +162,7 @@ void prints_veiculo(int i){
 }
 
 void prints_motorista(int i){
-    printf("\n\tId: %d", i+1);
+    printf("\n\tID: %d", i+1);
     printf("\n\tMotorista: %s", registroM[i].nome);
     printf("\n\tTelefone: %s", registroM[i].telefone);
     printf("\n\tViagens realizadas: %d", registroM[i].num_viagens);
@@ -164,8 +172,8 @@ void prints_motorista(int i){
 
 void prints_viagem(int i){
     printf("\n\t\tViagem");
-    printf("\n\tId: %d", i+1);
-    printf("\n\tTamanho do percurso: %.2f", registroViagem[i].percorrido);
+    printf("\n\tID: %d", i+1);
+    printf("\n\tTamanho do percurso: %.1f", registroViagem[i].percorrido);
     printf("\n\tOrigem da viagem: %s", registroViagem[i].origem);
     printf("\n\tDestino da viagem: %s", registroViagem[i].destino);
     printf("\n\tData início: %d/%d/%d", registroViagem[i].data_inicio_dia, registroViagem[i].data_inicio_mes, registroViagem[i].data_inicio_ano);
