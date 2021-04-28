@@ -8,10 +8,9 @@ int bissexto (int ano) {
 }
 
 int dist_dias(int i){
-	int idias, fdias;	/* guarda qtos dias tem da data */
-					/* ate o comeco do ano */
-	int def_anos = 0;	/* guarda diferenca entre anos das */
-					/* datas inicio e fim medida em dias */
+	int idias, fdias;	//guarda qtos dias tem da data ate o comeco do ano
+
+	int def_anos = 0;	//guarda diferenca entre anos das datas inicio e fim medida em dias 
 	register int j;
 	int dbissexto;
 
