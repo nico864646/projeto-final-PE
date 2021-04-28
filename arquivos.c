@@ -9,7 +9,7 @@ void salvar_veiculo(){
     if(arquivo != NULL)
         fwrite(registroV, sizeof(veiculo), 10, arquivo);
 
-    printf("\tSalvou com sucesso\n");
+    printf("\t\tSalvou com sucesso\n");
     fclose(arquivo);
 }
 
@@ -19,7 +19,7 @@ void salvar_motorista(){
     if(arquivo != NULL)
         fwrite(registroM, sizeof(motorista), 10, arquivo);
 
-    printf("\tSalvou com sucesso\n");
+    printf("\t\tSalvou com sucesso\n");
     fclose(arquivo);
 }
 
@@ -29,7 +29,7 @@ void salvar_viagem(){
     if(arquivo != NULL)
         fwrite(registroViagem, sizeof(viagem), 30, arquivo);
 
-    printf("\tSalvou com sucesso\n");
+    printf("\t\tSalvou com sucesso\n");
     fclose(arquivo);
 }
 
@@ -45,7 +45,7 @@ void ler_veiculo(){
     if(arquivo != NULL)
         fread(registroV, sizeof(veiculo), 10, arquivo);
 
-    printf("\tLeu com sucesso\n");
+    printf("\t\tLeu com sucesso\n");
     fclose(arquivo);
 }
 
@@ -55,7 +55,7 @@ void ler_motorista(){
     if(arquivo != NULL)
         fread(registroM, sizeof(motorista), 10, arquivo);
 
-    printf("\tLeu com sucesso\n");
+    printf("\t\tLeu com sucesso\n");
     fclose(arquivo);
 }
 
@@ -65,6 +65,6 @@ void ler_viagem(){
     if(arquivo != NULL)
         fread(registroViagem, sizeof(viagem), 30, arquivo);
 
-    printf("\tLeu com sucesso\n");
+    printf("\t\tLeu com sucesso\n");
     fclose(arquivo);
 }
