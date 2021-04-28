@@ -13,8 +13,8 @@ typedef struct { //10 cadastros
     char placa[10];
     int ano;
     float quilometragem;
-    char tipo[25]; // 1-Passeio, 2-Carga, 3-Transporte Passageiros
-    int status;// 0-Disponivel para cadastro , 1-No patio(cadastrado), 2-Em viagem, 3-Em manutenção;
+    char tipo[25];// 1-Passeio, 2-Carga, 3-Transporte Passageiros
+    int status;//    0-Disponivel para cadastro , 1-No patio(cadastrado), 2-Em viagem, 3-Em manutenção;
 }veiculo;
 
 typedef struct { //10 cadastros
@@ -22,7 +22,7 @@ typedef struct { //10 cadastros
     char telefone[10];
     char cpf[15];
     int num_viagens;
-    int status; // 0-Disponivel para cadastro, 1-Cadastrado, 2-Em Viagem;
+    int status; //    0-Disponivel para cadastro, 1-Cadastrado, 2-Em Viagem;
 }motorista;
 
 typedef struct { //30 cadastros;
@@ -42,7 +42,7 @@ typedef struct { //30 cadastros;
     int hora_fim_hh;
     int hora_fim_mm;
     int duracao_dias;
-    int status; //// 0-Disponivel para cadastro, 1 - Em aberto, 2 - Realizada
+    int status; //     0-Disponivel para cadastro, 1 - Em aberto, 2 - Realizada
 }viagem;
 
 veiculo *registroV;
