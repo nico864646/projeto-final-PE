@@ -35,7 +35,7 @@ void editar_veiculo(){
 
     system("cls");
     printf("\n\t\tEDITAR VEÍCULO");
-    consultar_editar();
+    consultar_editarVeiculo();
 
     printf("\n\t1. Informações do veículo");
     printf("\n\t2. Status do veículo (Manutenção)");
@@ -63,6 +63,10 @@ void editar_veiculo(){
             }
             else{
                 printf("\n\tVeículo em viagem, impossível transferi-lo para manutenção\n");
+                system("cls");
+                printf("\n\t\tCADASTRO DE VIAGENS");
+                printf("\n\n\tVeículos disponíveis para edição:");
+                consultar_editarVeiculo();
             }
             system("pause");
             salvar_veiculo();
@@ -196,14 +200,20 @@ void editar_viagem(){
 int escolhe_viagem(){
     int opcao_viagem = 0;
 
+do{
     printf("\n\tQual viagem deseja editar?");
     printf("\n\tSelecionar: ");
     scanf("%d", &opcao_viagem);
     opcao_viagem--;
 
     if(registroViagem[opcao_viagem].status != 1){
-        printf("\n\tViagem selecionada inválida para edição!");
-        menu();
+        printf("\n\tViagem selecionada inválida para edição!\n");
+        system("pause");
+        printf("\n\t\tEDITAR VIAGENS");
+        printf("\n\tLista de viagens cadastradas");
+        consultar_vAndamento();
     }
+
+}while(registroViagem[opcao_viagem].status != 1);
     return opcao_viagem;
 }
