@@ -22,7 +22,7 @@ void consultar_vDisponivel(){
     system("pause");
 }
 
-void consultar_editar(){
+void consultar_editarVeiculo(){
     printf("\n- - - - - - - - - - - - - - - - - - ");
     for(int i = 0; i < 10; i++){
         if(registroV[i].status == 1 || registroV[i].status == 3 ){
@@ -122,7 +122,7 @@ void consultar_media_viagem(){
 
     float media = (float)total_viagens / (float)total_motorista;
     printf("\n- - - - - - - - - - - - - - - - - - - - - - -");
-    printf("\n\tMédia da Viagens: %.1f\n", media);
+    printf("\n\tMÉDIA DE VIAGENS: %.1f\n", media);
     system("pause");
 }
 
@@ -139,7 +139,7 @@ void consultar_vDuracao(){
         }
     }
     printf("\n- - - - - - - - - - - - - - - - - - ");
-    printf("\n\t\tViagem com maior duração");
+    printf("\n\t\tVIAGEM COM MAIOR DURAÇÃO");
     printf("\n\tID: %d", id+1);
     printf("\n\tDia inicial: %d/%d/%d", registroViagem[id].data_inicio_dia, registroViagem[id].data_inicio_mes, registroViagem[id].data_inicio_ano);
     printf("\n\tHora inicial: %d:%d ", registroViagem[id].hora_inicio_hh, registroViagem[id].hora_inicio_mm);
@@ -173,7 +173,7 @@ void prints_motorista(int i){
 void prints_viagem(int i){
     printf("\n\t\tViagem");
     printf("\n\tID: %d", i+1);
-    printf("\n\tTamanho do percurso: %.1f", registroViagem[i].percorrido);
+    printf("\n\tTamanho do percurso: %.1f Km", registroViagem[i].percorrido);
     printf("\n\tOrigem da viagem: %s", registroViagem[i].origem);
     printf("\n\tDestino da viagem: %s", registroViagem[i].destino);
     printf("\n\tData início: %d/%d/%d", registroViagem[i].data_inicio_dia, registroViagem[i].data_inicio_mes, registroViagem[i].data_inicio_ano);
@@ -186,13 +186,13 @@ void prints_viagem(int i){
     printf("\n\tStatus: %d ", registroViagem[i].status);
     printf("\n\t- - - - - - - - - - - - - - ");
     printf("\n\t\tVeículo");
-    printf("\n\tId: %d", registroViagem[i].id_veiculo + 1);
+    printf("\n\tID: %d", registroViagem[i].id_veiculo + 1);
     printf("\n\tMarca: %s",registroV[registroViagem[i].id_veiculo].marca);
     printf("\n\tModelo: %s",registroV[registroViagem[i].id_veiculo].modelo);
     printf("\n\tPlaca: %s",registroV[registroViagem[i].id_veiculo].placa);
     printf("\n\t- - - - - - - - - - - - - - ");
     printf("\n\t\tMotorista");
-    printf("\n\tId: %d", registroViagem[i].id_motorista + 1);
+    printf("\n\tID: %d", registroViagem[i].id_motorista + 1);
     printf("\n\tNome: %s", registroM[registroViagem[i].id_motorista].nome);
     printf("\n\tCPF: %s", registroM[registroViagem[i].id_motorista].cpf);
     printf("\n\tTelefone: %s\n", registroM[registroViagem[i].id_motorista].telefone);
