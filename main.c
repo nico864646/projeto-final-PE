@@ -22,5 +22,6 @@ int main(void){
     free(registroV);
     free(registroViagem);
 
-    SetConsoleOutputCP(CPAGE_DEFAULT); //FIM
+    SetConsoleOutputCP(CPAGE_DEFAULT); 
+                //FIM
 }
