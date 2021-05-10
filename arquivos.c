@@ -4,7 +4,7 @@
 FILE *arquivo;
 
 void salvar_veiculo(){
-    arquivo = fopen("veiculoCadastrar.txt", "w+"); //abre o txt para ler fopen 'r'
+    arquivo = fopen("veiculoCadastrar.txt", "w+"); //Abre o txt para ler fopen 'r'
 
     if(arquivo != NULL)
         fwrite(registroV, sizeof(veiculo), 10, arquivo);
@@ -14,7 +14,7 @@ void salvar_veiculo(){
 }
 
 void salvar_motorista(){
-    arquivo = fopen("motoristaCadastrar.txt", "w+"); //abre o txt para ler fopen'r'
+    arquivo = fopen("motoristaCadastrar.txt", "w+"); //Abre o txt para ler fopen'r'
 
     if(arquivo != NULL)
         fwrite(registroM, sizeof(motorista), 10, arquivo);
@@ -24,7 +24,7 @@ void salvar_motorista(){
 }
 
 void salvar_viagem(){
-    arquivo = fopen("viagemCadastrar.txt", "w+"); //abre o txt para ler fopen'r'
+    arquivo = fopen("viagemCadastrar.txt", "w+"); //Abre o txt para ler fopen'r'
 
     if(arquivo != NULL)
         fwrite(registroViagem, sizeof(viagem), 30, arquivo);
@@ -40,7 +40,7 @@ void lertTosdosarquivos(){
 }
 
 void ler_veiculo(){
-    arquivo = fopen("veiculoCadastrar.txt", "r"); //abre o txt para ler fopen'r'
+    arquivo = fopen("veiculoCadastrar.txt", "r"); //Abre o txt para ler fopen'r'
 
     if(arquivo != NULL)
         fread(registroV, sizeof(veiculo), 10, arquivo);
@@ -50,7 +50,7 @@ void ler_veiculo(){
 }
 
 void ler_motorista(){
-    arquivo = fopen("motoristaCadastrar.txt", "r"); //abre o txt para ler fopen'r'
+    arquivo = fopen("motoristaCadastrar.txt", "r"); //Abre o txt para ler fopen'r'
 
     if(arquivo != NULL)
         fread(registroM, sizeof(motorista), 10, arquivo);
@@ -60,7 +60,7 @@ void ler_motorista(){
 }
 
 void ler_viagem(){
-    arquivo = fopen("viagemCadastrar.txt", "r"); //abre o txt para ler fopen'r'
+    arquivo = fopen("viagemCadastrar.txt", "r"); //Abre o txt para ler fopen'r'
 
     if(arquivo != NULL)
         fread(registroViagem, sizeof(viagem), 30, arquivo);
