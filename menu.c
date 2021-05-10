@@ -11,7 +11,7 @@ void menu(){
         system("cls");
         printf("\n\tCONTROLE DE FROTAS\n");
         printf("- - - - - - - - - - - - - - - - - -\n");
-        printf("\t\tMenu\n");
+        printf("\t\tMENU\n");
         printf("\t1. Cadastrar\n");
         printf("\t2. Editar\n");
         printf("\t3. Excluir\n");
