@@ -108,6 +108,5 @@ void excluir_viagem(){
         salvar_viagem();
         printf("\n");
         system("pause");
-    }
-        
+    }      
 }
