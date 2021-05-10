@@ -2,7 +2,7 @@
 //                                          ---- CADASTRO ----
 void controle_cadastroVeiculos(int inicializa){
     if(inicializa == 0){
-        inicializa = inicializa_estruturas(); //iniciliza status
+        inicializa = inicializa_estruturas();//iniciliza status
         cadastrar_veiculo();
     }
     else{
@@ -12,7 +12,7 @@ void controle_cadastroVeiculos(int inicializa){
 
 void controle_cadastroMotoristas(int inicializa){
     if(inicializa == 0){
-        inicializa = inicializa_estruturas(); //iniciliza status
+        inicializa = inicializa_estruturas();//iniciliza status
         cadastrar_motorista();
     }
     else{
